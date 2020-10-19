@@ -1,0 +1,57 @@
+/* ==========================================================================
+ *
+ * [COLOR variables]
+ *
+ * ========================================================================== */
+
+/* Main colors */
+:root {
+  /* hex */
+  --color-main-primary: #0083c9;
+  --color-main-primaryLight: #fff4c1;
+  --color-main-accent: #00b8b5;
+  --color-main-accentLight: #7bd4d4;
+  --color-main-subDark: #7a776a;
+  --color-main-subLight: #f1efee;
+
+  /* rgb */
+  --color-rgb-main-primary: 0, 131, 201;
+  --color-rgb-main-primaryLight: 255, 244, 193;
+  --color-rgb-main-accent: 0, 184, 181;
+  --color-rgb-main-accentLight: 123, 212, 212;
+  --color-rgb-main-subDark: 122, 119, 106;
+  --color-rgb-main-subLight: 241, 239, 238;
+}
+
+/* Text colors */
+:root {
+  /* hex */
+  --color-text-primary: #fff;
+  --color-text-secondary: #c3c3c3;
+  --color-text-disabled: #e7e6e6;
+  --color-text-error: #ce361f;
+  --color-text-default: var(--color-text-primary);
+
+  /* rgb */
+  --color-rgb-text-primary: 255, 255, 255;
+  --color-rgb-text-secondary: 195, 195, 195;
+  --color-rgb-text-disabled: 231, 230, 230;
+  --color-rgb-text-error: 206, 54, 31;
+  --color-rgb-text-default: var(--color-rgb-text-primary);
+}
+
+/* Other */
+:root {
+  /* hex */
+  --color-other-white: #fff;
+  --color-other-campaign: #23c360;
+
+  /* rgb */
+  --color-rgb-other-white: 255, 255, 255;
+  --color-rgb-other-campaign: 35, 195, 96;
+}
+
+/* Alpha */
+:root {
+  --color-alpha-hover: 0.8;
+}

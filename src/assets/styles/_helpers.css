@@ -1,0 +1,12 @@
+/* ==========================================================================
+ *
+ * [Helpers]
+ *
+ * ========================================================================== */
+/* stylelint-disable declaration-no-important */
+._internal-link {
+  display: block !important;
+  margin-top: calc(-1 * var(--size-header-height)) !important;
+  padding-top: var(--size-header-height) !important;
+}
+/* stylelint-enable declaration-no-important */

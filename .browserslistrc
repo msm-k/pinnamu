@@ -1,0 +1,5 @@
+defaults
+ie 11
+ios >= 11
+android >= 5
+node 10

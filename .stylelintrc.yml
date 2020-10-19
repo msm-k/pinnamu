@@ -1,0 +1,19 @@
+ignoreFiles:
+  - "node_modules/**/*"
+plugins:
+  - "stylelint-order"
+  - "stylelint-config-rational-order/plugin"
+  - "stylelint-prettier"
+extends:
+  - "stylelint-config-rscss-recommended"
+  - "stylelint-prettier/recommended"
+rules:
+
+  # Property order
+  "plugin/rational-order": [true, {
+    "border-in-box-model": false,
+    "empty-line-between-groups": false,
+  }]
+
+  # Prettier
+  "prettier/prettier": true

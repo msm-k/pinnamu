@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="icon_window">
+        <g id="l1" data-name="l1">
+            <path id="path15" d="M12.383 85.04H.787A.787.787 0 0 1 0 84.253V72.988a.806.806 0 0 1 .8-.81.787.787 0 0 1 .772.79v10.167a.33.33 0 0 0 .33.33h10.46a.8.8 0 0 1 .808.8.787.787 0 0 1-.787.772z" class="cls-1" data-name="path15" transform="translate(0 -69.211)"/>
+            <path id="path16" d="M81.583 0h-11.6a.787.787 0 0 0-.783.787v11.286a.787.787 0 0 0 .787.787h11.6a.788.788 0 0 0 .787-.787V.787A.788.788 0 0 0 81.583 0zM70.775 10.887V3.874H80.8v7.013a.4.4 0 0 1-.4.4h-9.225a.4.4 0 0 1-.4-.4z" class="cls-1" data-name="path16" transform="translate(-66.37)"/>
+        </g>
+    </g>
+</svg>

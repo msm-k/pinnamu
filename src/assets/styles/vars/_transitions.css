@@ -1,0 +1,33 @@
+/* ==========================================================================
+ *
+ * [transitions variables]
+ *
+ * ========================================================================== */
+
+/* --------------------------------
+ * Easing
+ * -------------------------------- */
+:root {
+  --cubic-ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --cubic-ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --cubic-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --quad-ease-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/* --------------------------------
+ * Transitions
+ * -------------------------------- */
+:root {
+  /* Link hover */
+  --transition-link-hover: all 0.15s ease-out 0s;
+
+  /* Accordion */
+  --transition-accordion: all 0.33s 0s;
+
+  /* Fade in/out */
+  --transition-fade-out: all 0.33s var(--cubic-ease-out) 0s;
+  --transition-fade-in: all 0.33s var(--cubic-ease-in) 0s;
+
+  /* Text fade in */
+  --transition-text-fade-in: all 0.6s var(--cubic-ease-in) 0s;
+}

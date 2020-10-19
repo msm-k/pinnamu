@@ -1,0 +1,42 @@
+#!/bin/bash
+
+#==============================================
+# Entry point of this script
+#==============================================
+
+if [[ $(uname -s) != 'Darwin' ]]; then
+
+  echo 'This script support macOS only.'
+  exit 1
+
+fi
+
+which brew > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+
+  echo "Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Complete installing Homebrew."
+
+fi
+
+which ndw > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+
+  echo "Installing ndw..."
+  bash <(curl -s https://raw.githubusercontent.com/kkoudev/ndw/master/install.sh)
+  echo "Complete installing ndw."
+
+fi
+
+# Install image libraries
+brew install libjpeg libpng giflib libsvg
+
+ndw install -c -s
+ndw install-yarn
+yarn
+
+echo '======================================================================='
+echo 'Complete setup.'
+echo '======================================================================='
+

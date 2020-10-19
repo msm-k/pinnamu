@@ -1,0 +1,26 @@
+//- Specify layout template.
+extends /../layouts/application.pug
+
+//- Declarations of variable for meta or using JavaScript.
+block append vars
+  - const title = '';
+  - const description = '';
+  - const canonical = '';
+  - const stylesheets  = ['bundle'];
+  - const headScripts = [];
+  - const tailScripts = ['index'];
+  - const ogUrl = '';
+  - const ogImage = '';
+  - const topPage = true;
+  - const inlineStyles = ['index'];
+
+//- Following are contents of inner body.
+block content
+
+  //- header
+  include /../partials/_header.pug
+
+  //- TODO : main contents
+
+  //- footer
+  include /../partials/_footer.pug

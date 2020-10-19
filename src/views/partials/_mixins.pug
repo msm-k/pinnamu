@@ -1,0 +1,10 @@
+//-
+//- 遅延ロード画像タグ
+//-
+mixin lazyimg(src, srcset, alt)
+  img(
+    class=attributes.class
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    data-src=src
+    data-srcset=srcset
+    alt=alt).js-lazyload

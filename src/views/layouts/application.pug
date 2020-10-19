@@ -1,0 +1,59 @@
+block vars
+include ../partials/_mixins.pug
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+    title= title
+    meta(name="description" content=description)
+    if keywords
+      meta(name="keywords" content=keywords)
+    meta(name="robots" content=`${robots ? robots : "index,follow"}`)
+    meta(name="format-detection" content=`${formatDetection ? formatDetection : "telephone=no, address=no, email=no"}`)
+    if topPage
+      meta(property="og:type" content="website")
+    else
+      meta(property="og:type" content="article")
+    meta(property="og:url" content=`${ogUrl != null ? env.rootUrl + ogUrl : ""}`)
+    meta(property="og:title" content=`${ogTitle != null ? ogTitle : title}`)
+    meta(property="og:description" content=`${ogDescription != null ? ogDescription : description}`)
+    meta(property="og:image" content=`${ogImage != null ? env.rootUrl + ogImage : ""}`)
+    meta(property="og:site_name" content=`${ogSiteName != null ? ogSiteName : ""}`)
+    meta(property="og:locale" content="ja_JP")
+    meta(property="fb:app_id" content="")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content="")
+    include ../partials/_favicon.pug
+    if env.preconnects && env.preconnects.length > 0
+      each preconnect in env.preconnects
+        link(rel="preconnect" href=preconnect)
+    if canonical
+      link(rel="canonical" href=canonical)
+    include ../partials/_gtm_head.pug
+    if env.criticalPathStyles && inlineStyles && inlineStyles.length > 0
+      each inlineStyle in inlineStyles
+        style= env.criticalPathStyles[inlineStyle]
+    if stylesheets && stylesheets.length > 0
+      if env.isNodeProduction
+        each stylesheet in stylesheets
+          link(rel="preload" href=`/assets/styles/${stylesheet}.css?${env.time}` as="style" onload="this.onload=null;this.rel='stylesheet'")
+          noscript
+            link(rel="stylesheet" href=`/assets/styles/${stylesheet}.css?${env.time}`)
+        include ../partials/_loadcss.pug
+      else
+        each stylesheet in stylesheets
+          link(rel="stylesheet" href=`/assets/styles/${stylesheet}.css?${env.time}`)
+    if headScripts && headScripts.length > 0
+      each script in headScripts
+        script(src=`/assets/scripts/${script}.js?${env.time}` defer)
+
+  body
+    include ../partials/_gtm_body.pug
+    block content
+
+    script(src=`/assets/scripts/vendor.bundle.js?${env.time}` defer)
+    if tailScripts && tailScripts.length > 0
+      each script in tailScripts
+        script(src=`/assets/scripts/${script}.js?${env.time}` defer)

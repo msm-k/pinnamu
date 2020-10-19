@@ -1,0 +1,12 @@
+/* ==========================================================================
+ *
+ * [Fonts variables]
+ *
+ * ========================================================================== */
+
+:root {
+  --font-default-size: 1.6rem;
+  --font-body-typeface: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  --font-ascii-typeface: '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial';
+  --font-default-line-height: 1.6;
+}
